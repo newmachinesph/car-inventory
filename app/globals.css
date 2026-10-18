@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* ── Custom theme tokens ──────────────────────────────────────── */
+@theme {
+  /* Fonts */
+  --font-sans:    var(--font-inter);
+  --font-heading: var(--font-raleway);
+
+  /* Gold */
+  --color-gold-50:  #FEFBEE;
+  --color-gold-100: #FBF3CF;
+  --color-gold-200: #F5E28E;
+  --color-gold-300: #EDCB56;
+  --color-gold-400: #D4AE3A;
+  --color-gold-500: #C9A84C;
+  --color-gold-600: #A8832A;
+  --color-gold-700: #866514;
+  --color-gold-800: #634B0D;
+
+  /* Navy */
+  --color-navy-50:  #EEF3FB;
+  --color-navy-100: #D2DDEF;
+  --color-navy-200: #A5BADF;
+  --color-navy-300: #6F8FC4;
+  --color-navy-400: #3F67A8;
+  --color-navy-500: #254D8E;
+  --color-navy-600: #1B3870;
+  --color-navy-700: #132756;
+  --color-navy-800: #0E1B3A;
+  --color-navy-900: #0C1829;
+  --color-navy-950: #070E1A;
+}
+
+/* ── Base ─────────────────────────────────────────────────────── */
+:root {
+  --background: #ffffff;
+  --foreground: #0C1829;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-raleway), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+* { box-sizing: border-box; }
+
+/* ── Image zoom ───────────────────────────────────────────────── */
+.img-zoom { overflow: hidden; }
+.img-zoom img { transition: transform 0.45s ease; }
+.img-zoom:hover img { transform: scale(1.06); }
+
+/* ── Form accents ─────────────────────────────────────────────── */
+input[type="range"]    { accent-color: #C9A84C; }
+input[type="checkbox"] { accent-color: #C9A84C; }
+input[type="radio"]    { accent-color: #C9A84C; }
+
+/* ── Scrollbar (thin) ─────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D4AE3A44; border-radius: 9999px; }
